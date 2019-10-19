@@ -6,7 +6,7 @@
 	<!-- Project -->
 	<groupId>com.s3curitybug</groupId>
 	<artifactId>jackson-databind-cves</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0.RELEASE</version>
 	<packaging>jar</packaging>
 
 	<!-- Parent -->
